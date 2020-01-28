@@ -149,7 +149,7 @@
         footer {
             height: 50px;
             padding: 20px;
-            background-color: #40403f;
+            background-color: #1b1d20;
         }
         .box{
             width: 91vw;
@@ -201,7 +201,7 @@
         #anonimos2 {
             width: 700px;
             height: 535px;
-            background-color: #c1c1c1;
+            background-color: #949393;
             box-shadow: 0px 8px 10px 0px rgba(0, 0,0, 0.70);
             display: none;
             position: absolute;
@@ -217,7 +217,7 @@
             height: 50px;
             right: -22px;
             margin-top: 304px;
-            background-color: #c1c1c1;
+            background-color: #949393;
             -webkit-transform: rotate(45deg);
             
         }
@@ -290,7 +290,7 @@
 
         .card .face.face1 {
             position: relative;
-            background: #364465;
+            background: #1b1d20;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -360,7 +360,7 @@
         }
         .card:hover .face.face1{
             transform: translateY(0px);
-            background: #434169;
+            background: #f9ca24;
         }
 
 
@@ -473,7 +473,7 @@
 
             width: 100vw;
             height: 100vh;
-            background-color: rgba(0, 0, 0, .7);
+            background-color: rgba(0, 0, 0, 0.85);
             position: absolute;
             visibility: hidden;
             z-index: 1;
@@ -636,6 +636,9 @@
         a.bntMenu.btnMenu_opem {
             display: ;
         }
+        .txt-color {
+            color: #f9ca24;
+        }
         
         /*----mobile----*/
         @media screen and (max-width: 600px){
@@ -718,10 +721,10 @@
                     <div id="anonimos2" style="display: none;">
                         <div class="exit" onclick="ani2()">X</div>
                         <div class="img-bg">
-                            <img class="box-foto" src="img/foto-002.png">
+                            <img class="box-foto" src="img/coding1.png">
                         </div>
                         <div class="text">
-                            <h2>Olá</h2>
+                            <h2 class="txt-color">Olá</h2>
                             <p> Tenho 29 anos, solteiro e paixonado por criação de sites e layouts. <br> sempre gostei de lógica e resolição de 
                                 probemas foi onde conheci o universo da programação.<br> <br> Com o passar dos anos me desenvolvi e criei minhas Skills 
                                 e não parei mais, sou fascinado por conhecimento e nao gosto de ficar estagnado. sou formado em Marketing pela 
@@ -921,6 +924,10 @@
             });
             
         }
+
+        btClose.addEventListener('click',function(){
+            modal.classList.toggle('modal_active');
+        });
 
 
         /*----botao foto perfil backgroud----*/
