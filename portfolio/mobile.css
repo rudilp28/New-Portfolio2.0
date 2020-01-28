@@ -1,0 +1,56 @@
+@media screen and (max-width: 600px){
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    .btnMenu_open {
+        display: block;
+        background-image: url(img/hamburguinho.svg);
+        background-position: 20px 8px;
+        background-repeat: no-repeat;
+        text-indent: -99999px;
+        padding: 20px 20px;
+       
+       
+    }
+    .btnMenu_close {
+        background-color: #888;
+        background-image: url(img/hamburguinho.svg);
+        background-position: 20px 8px;
+        background-repeat: no-repeat;
+        text-indent: -99999px;
+        padding: 20px 20px;
+        
+    }
+    .menu-item {
+        padding: 20px 20px;
+    }
+    .menu-item .scroll{
+        color: #888;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+    .menu {
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        transform: translateX(-100%);
+        transition: transform 200ms linear;
+    }
+    .menu-open {
+        transform: translateX(0%);
+        height: 100%;
+    }
+
+    
+
+  
+    
+}
+
+
+
+

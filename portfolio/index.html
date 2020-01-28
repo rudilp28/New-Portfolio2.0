@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Meu Portfolio</title>
+    <link rel="stylesheet" href="mobile.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+
+        #home {
+            background-color:black;
+            background-image: url('img/img-bg1.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            padding: 180px;
+            height: 400px;
+        }
+        #sobre{
+            background-color: #949393;
+            padding: 20px;
+            display: flex;
+        }
+        #inform{
+            background-color: #949393;
+            padding: 90px;
+            padding-top: 45px;
+        }
+        #skills{
+            background-color: #40403f;
+            padding: 20px 0px;
+            
+
+            
+        }
+        #contato{
+            background-color: #949393;
+            padding: 20px;
+            
+
+        }
+
+        .sections{
+            transition: all .4s;
+        }
+
+       
+
+        .scrool input {
+            display: none;
+       
+        }    
+        div#logo {
+            margin-right: 17%;
+             margin-left: 20px;
+        }
+
+  
+        .rede{
+           width: 40px;
+           height: 40px;
+           border-radius: 50px;
+           background-color: #f9ca24b0;
+           cursor: pointer;
+           transition: all .3s ease-in-out;
+        }
+        .rede:hover {
+            transform: translateY(-6px);
+            background-color: #c1c0bb;
+        }
+
+        img.icone {
+            width: 25px;
+            height: 25px;
+            padding: 7px;
+        }
+        img.icone-logo{
+            width: 35px;
+            /* border: solid; */
+            border: 2px solid #f9ca24b0;
+            border-radius: 50px;
+            transition: all .3s ease-in;
+        }
+        img.icone-logo:hover {
+            transform: translateY(-5px);
+            background-color: #c1c0bb;
+        }
+
+        .icon-global{
+            display: flex;
+            margin-left: 9%;
+        }
+        div#github {
+            margin: 0px 10px;
+        }
+        .img-backgroud{
+            height: 200px;
+
+        }
+
+        h1{
+            margin: 0;
+            padding: 0;
+        }
+        .n1{
+            position: relative;
+            text-align: left;
+            /* margin-left: 200px; */
+            font-size: 130px;
+            font-family: 'Roboto Slab', serif;
+        }
+        .n1 {color: #f9ca24; display: inline}
+        .n1 + h2 {color:#fff; display: inline;}
+        h1 + h1 + h1 {color: green;
+        }
+        h2 {
+            font-size: 50px;
+            margin: 0;
+            padding: 0;
+            display: inline;
+            font-weight: 500;
+           
+        }
+
+        .n2 {
+            position: relative;
+            text-align: left;
+            margin-left: 30px;
+            font-size: 50px;
+            font-family: 'Roboto Slab', serif;
+            display: inline;
+            color: #f9ca24;
+        }
+
+        header {
+            /* height: 400px; */
+            padding: 50px;
+
+        }
+        footer {
+            height: 50px;
+            padding: 20px;
+            background-color: #40403f;
+        }
+        .box{
+            width: 91vw;
+            height: 600px;
+            background-color: #40403f;
+            margin: -70px auto;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            padding: 30px;
+            padding-top: 95px;
+            position: relative;
+        }
+        
+       
+        h4 {
+            color: #fff;
+            font-size: 22.5px;
+            font-family: 'Roboto Slab';
+            letter-spacing: 2px;
+            margin-top: -20px;
+        }
+        h1 {
+            font-size: 45px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #595858;
+            font-family: 'Roboto Slab', serif;
+        }
+        h3 {
+            text-align: center;
+            color: #b7af27;
+            font-family: 'Roboto slab' , serif;
+            top: -40px;
+            position: relative;
+        }
+        .avatar {
+            width: 170px;
+            cursor: pointer;
+            border: 3px solid #fff;
+            border-radius: 50vh;
+        }
+        .avatar:hover {
+            border: 3px solid rgb(121, 209, 21);
+            border-radius: 50vh;
+        }
+
+
+        #anonimos2 {
+            width: 700px;
+            height: 535px;
+            background-color: #c1c1c1;
+            box-shadow: 0px 8px 10px 0px rgba(0, 0,0, 0.70);
+            display: none;
+            position: absolute;
+            right: 230px;
+            margin-top: -340px;
+            border-radius: 10px;
+            transition: all 0.3s ease-in;
+        }
+        #anonimos2::before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            right: -22px;
+            margin-top: 304px;
+            background-color: #c1c1c1;
+            -webkit-transform: rotate(45deg);
+            
+        }
+        .exit {
+            font-size: 20px;
+            color: #fff;
+            background-color: #443f3fb8;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 50px;
+            cursor: pointer;
+            position: absolute;
+            margin: 10px;
+            transition: all 0.4s ease;
+            right: 10px;
+        }
+        .exit:hover {
+            background-color: #cececed6;
+            transform: translateY(-5px);
+        }
+        .fot-avatar {
+            position: absolute;
+            right: 255px;
+            top: 255px;
+        }
+        img.box-foto {
+            width: 100%;
+            border-radius: 10px 10px 0px 0px;
+
+
+        }
+        .img-bg {
+            margin-bottom: 10px;
+        }
+
+        .namer {
+            font-size: 25px;
+            color: #fff;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .text {
+            padding: 0px 30px 10px;
+        }
+        img.camada-text {
+            width: 35%;
+            position: absolute;
+            top: 200px;
+            left: 280px;
+            cursor: pointer;
+            transition: all .04s ease;
+        }
+        img.camada-text:hover {
+            transform: scale(1.1);
+        }
+
+        ul.dados-sobre {
+            padding-right: 20px;
+        }
+
+        /*----- stilo card  -----*/
+
+        .card {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .card .face.face1 {
+            position: relative;
+            background: #364465;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 25px;
+            z-index: 1;
+            transform: translateY(100px);
+            border-radius: 10px 10px 0px 0px;
+            padding: 20px 0px;
+        }
+       
+
+        .card .face.face2 {
+            position: relative;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        .design, .code, .outros {
+            max-width: 130px;
+        }
+
+        .card .face.face1 .content h3 {
+            margin: 40px 0 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .caixa1 {
+            
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+            
+        }
+
+        
+        .card:hover .face.face1 .content{
+            opacity: 1;
+            
+        }
+        .card .face.face1 .content{
+            opacity: 0.2;
+            transition: 0.5s;
+        }
+
+        .card .face.face2 .content p{
+            margin: 0;
+            padding:0;
+        }
+
+        .card .face.face2{
+            position: relative;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+        }
+        .card:hover .face.face1{
+            transform: translateY(0px);
+            background: #434169;
+        }
+
+
+        .card .face{
+            width: 300px;
+            height: 200px;
+            transition: 0.5s;
+        }
+
+        .card{
+            position: relative;
+            cursor: pointer;
+            margin: 20px;
+        }
+        /* ------contatos-------*/
+        .dados-sobre::after {
+            width: 100%;
+        }
+
+        .dados-sobre li::after {
+            content: '';
+            border: 1px solid rgb(125, 133, 146);
+            display: block;
+            width: 100%;
+            top: 0px;
+        }
+
+        .dados-sobre li::after {
+            right: 0px;
+        }
+        
+        .box-dados {
+            display: flex;
+            position: absolute;
+            align-self: center;
+        }
+        .dados-sobre1 li {
+            border-left: 2px solid #fff;
+            padding-left: 30px;
+        }
+
+        .dados-sobre1 li::after {
+            content: '';
+            border: 1px solid rgb(125, 133, 146);
+            display: block;
+            width: 100%;
+            top: 0px;
+        }
+        .box-contact {
+            background-color: #1b1d20;
+            display: flex;
+            align-self: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 16px 4px rgba(0,0,0,0.3);
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 15vh 0px;
+        }
+        .box-contact1 {
+            background-color: #1b1d20;
+            display: flex;
+            align-self: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 16px 4px rgba(0,0,0,0.3);
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 3vh 0px;
+        }
+
+        .text-titulo {
+            margin: 30px 0px;
+        }
+
+        .card_img{
+            width: 270;
+            height: 270px;
+            overflow: hidden;
+            margin: 12px;
+            border-radius: 20px;
+        }
+
+        .small_img{
+            height: 100%;
+            cursor: pointer;
+            transition: all linear 0.4s;
+        }
+        .small_img:hover{
+            filter: grayscale(100%);
+            transform: scale(1.1);
+        }
+
+        .row{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #modal_img{
+            width: 45vw;
+            transform: scale(0);
+            transition: all linear .3s;
+        }
+
+        .modal_active #modal_img{
+            transform: scale(1);
+        }
+        .modal{
+
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, .7);
+            position: absolute;
+            visibility: hidden;
+            z-index: 1;
+            opacity: 0;
+            transition: visibility 0.8s linear, opacity 0.5s linear;
+        }
+
+        .modal_content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #btn_close{
+            color:#fff;
+            background-color: #000;
+            position: absolute;
+            top:30px;
+            right: 10px;
+            padding: 5px 10px;
+            font-size: 25px;
+            border:solid 1px #fff;
+            transition: all ease-out .4s;
+            cursor: pointer;
+        }
+        #btn_close:hover{
+            background-color: #f00;
+        }
+
+        .modal_active{
+            visibility: visible;
+            opacity: 1;
+
+        }
+        /* ----contact---- */
+        .contact-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .inner-width {
+            max-width: 600px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .contact-section h1 {
+            font-size: 20px;
+            color: #888;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+        }
+        .email,.mensagem,.name {
+            background: none;
+            border: none;
+            border-bottom: 1px solid;
+            color: #888;
+            outline:none;
+            padding: 10px 6px;
+            font-size: 16px;
+        }
+        .name {
+            float: left;
+            width: 270px;
+        }
+        .email {
+            float: right;
+            width: 270px;
+        }
+
+        .mensagem {
+            min-width: 100%;
+            max-width: 100%;
+        }
+        .contact-section button {
+            background: none;
+            padding: 12px 40px;
+            border: 1px solid #f9ca24;
+            text-transform: uppercase;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .contact-section button:hover {
+            background-color: #888;
+            transform: scale(0.9) ;
+
+        }
+
+         /* ----contact---- */
+         .contact-section1 {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .inner-width1 {
+            max-width: 600px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .contact-section1 h1 {
+            font-size: 20px;
+            color: #888;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+        }
+        .email1,.mensagem1,.name1 {
+            background: none;
+            border: none;
+            border-bottom: 1px solid;
+            color: #888;
+            outline:none;
+            padding: 10px 6px;
+            font-size: 16px;
+        }
+        .name1 {
+            float: left;
+            width: 270px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .email1 {
+            width: 270px;
+            text-align: left;
+        }
+
+        .mensagem1 {
+            float: left;
+            width: 270px;
+            text-align: left;
+        }
+        .contact-section1 button {
+            background: none;
+            padding: 12px 40px;
+            border: 1px solid #f9ca24;
+            text-transform: uppercase;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .contact-section1 button:hover {
+            background-color: #888;
+            transform: scale(0.9) ;
+
+        }
+        .h1-contact {
+            font-size: 45px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #595858;
+            font-family: 'Roboto Slab', serif;
+        }
+        a.bntMenu.btnMenu_opem {
+            display: ;
+        }
+        
+        /*----mobile----*/
+        @media screen and (max-width: 600px){
+            .box-contact{
+                display:grid;
+            }
+            img.icone-logo {
+                display: none;
+            }
+            .icon-global {
+                display: none;
+            }
+            
+        }
+
+      
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="link">
+        <div class="rede1" id="logo">
+		    <img class="icone-logo" src="img/icon-logo3.png" ></a>
+        </div>
+        <a href="#menu" class="bntMenu btnMenu_open">Menu</a>
+
+        <ul id="menu" class="menu">
+            <li class="btnMenu btnMenu_close">Sair</li>
+            <li class="menu-item">
+                <a class="scroll" href="#home">Home</a>
+            </li> 
+            <li class="menu-item">
+                <a class="scroll1" href="#sobre">Sobre</a>
+            </li>
+            <li class="menu-item">
+                <a class="scroll2" href="#inform">Inform</a>
+            </li>
+            <li class="menu-item">
+                <a class="scroll3" href="#skills">Portfolio</a>
+            </li>
+            <li class="menu-item">
+                <a class="scroll4" href="#contato">Contato</a>
+            </li>   
+        </ul>
+
+        <div class="icon-global">
+            <div class="rede" id="linkedin">
+                <a href=https://www.behance.net/rudineiroc4558 target=”_blank”><img class="icone" src="img/Behance.png" ></a>
+            </div>
+            <div class="rede" id="github">
+                <a href=https://github.com/rudilp28 target=”_blank”><img class="icone" src="img/github.png" ></a>
+            </div>
+            <div class="rede" id="facebook">
+                <a href=https://www.facebook.com/rudinei.lopes.39 target=”_blank”><img class="icone" src="img/facebook.png" ></a>
+            </div>
+        </div>
+    </nav>
+        <section class="bloco1" id="home">
+            <header>
+                <h1 class="n1">R</h1>
+                <h2>udinei</h2>
+                <h1 class="n1">L</h1 class="n1">
+                <h2>opes</h2>
+                <h4>Front-End Developer & Designer</h4>
+            </header>
+        </section>
+
+        <section class="bloco" id="sobre">
+            <div class="box">
+                <h1>SOBRE</h1>
+                <h3>Quem sou eu</h3>
+
+                <img class="camada-text" src="img/Camada-text2.png" >
+                <div class="fot-avatar">
+                    <img id="botao" class="avatar"  src="img/foto.png">
+                    <p class="namer">RUDINEI LOPES</p>
+                    <div id="anonimos2" style="display: none;">
+                        <div class="exit" onclick="ani2()">X</div>
+                        <div class="img-bg">
+                            <img class="box-foto" src="img/foto-002.png">
+                        </div>
+                        <div class="text">
+                            <h2>Olá</h2>
+                            <p> Tenho 29 anos, solteiro e paixonado por criação de sites e layouts. <br> sempre gostei de lógica e resolição de 
+                                probemas foi onde conheci o universo da programação.<br> <br> Com o passar dos anos me desenvolvi e criei minhas Skills 
+                                e não parei mais, sou fascinado por conhecimento e nao gosto de ficar estagnado. sou formado em Marketing pela 
+                                Etec, cursei um ano de Design Gráfico na FMU e tive a oportunidade 
+                                de fazer um estagio para programador Front-End. Atualmente curso Análise e desenvolvimento de sistemas 
+                                na UNIP, tenho conhecimentos de Photoshop, Illustrator e CorelDraw. bom é isso aproveite essa viagem pelo meu 
+                                portfolio até.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </section>
+
+        <section class="bloco" id="inform">
+            <h1>INFORM</h1>
+            <h3>Informações</h3>
+            
+                <div class="caixa1">
+                    <div class="card">
+                        <div class="face face1">
+                            <div class="content">
+                                <img class="design"src="img/design.png">
+                                <h3>Design</h3>
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>Cursei um ano de Design Gráfico na FMU onde pude melhorar meus conhecimentos em geral sobre Desing, trabalho com Illusrator , photoshop e CorelDraw, podera ver meus trabalhos de Design no meu perfil do Behance. </p>
+                            </div>
+                        </div>
+                    </div>
+           
+                    <div class="card">
+                        <div class="face face1">
+                            <div class="content">
+                                <img class="code"src="img/code.png">
+                                <h3>Code</h3>
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>Conhecimentos em HTML5 ,CSS, JavaScript e linguagem C basico, adquiri e melhorei meus conhecimentos atraves do estagio que fiz de 1 ano como progrmador onde desenvolvia toda parte de Front de cursos EADs para grandes instituições. </p>
+                            </div>
+                        </div>
+                    </div>
+           
+                    <div class="card">
+                        <div class="face face1">
+                            <div class="content">
+                                <img class="outros"src="img/outros.png">
+                                <h3>Outros</h3>
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>Tenho habilidades em resolução de probrema ,trabalho bem em equipe, pro-ativo e sempre procuro estar me atualizando e aprendendo. </p>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+            
+        </section>
+
+        <section class="bloco" id="skills">
+            <div class="text-titulo">
+                <h1>PORTFO</h1>
+                <h3>Trabalhos</h3>
+            </div>   
+
+            <div class="modal">
+                <div class="modal_content">
+                    <img src="img/clielo5.png" id="modal_img">
+                </div>
+                <span id="btn_close">&times;</span>
+            </div>
+            <div class="row">
+                <div class="card_img">
+                    <img src="img/clielo5.png" class="small_img">
+                </div>
+                <div class="card_img">
+                    <img src="img/studi.png" class="small_img">
+                </div>
+                <div class="card_img">
+                    <img src="img/lgRudi.png" class="small_img">
+                </div>
+            </div>
+            <div class="row">
+                <div class="card_img">
+                    <img src="img/starwars.png" class="small_img">
+                    </div>
+                    <div class="card_img">
+                        <img src="img/studio2.png" class="small_img">
+                </div>
+                    <div class="card_img">
+                        <img src="img/lgRudi2.png" class="small_img">
+                </div>
+            </div>
+        </section>
+
+        <section class="bloco" id="contato">
+        <div class="text-titulo">    
+            <h1>CONTACT</h1>
+            <h3>contatos</h3>
+        </div> 
+         
+            <div class="box-contact">     
+
+                <div class="box-contact1"> 
+                    <div class="contact-section1">
+                        <div class="inner-width1">
+                            <h1 class="h1-cntact">Meus Contatos</h1>
+                            <p class="name1">Tell: (11) 3692-9364</p> 
+                            <p class="email1">Whatsap: (11) 97954-1744</p> 
+                            <p class="mensagem1">Email: rudinei.lopes@hotmail.com</p> 
+                        </div>
+                    </div>
+                </div>     
+
+                <div class="contact-section">
+                    <div class="inner-width">
+                        <h1>Sugestão? Entre em contato</h1>
+                        <input type="text" class="name" placeholder="Seu Nome">
+                        <input type="emal" class="email" placeholder="Seu Email">
+                        <textarea  rows="1" class="mensagem" placeholder="Mensagem"></textarea>
+                        <button>Enviar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h1>MUITO</h1>
+                <h3>Obrigado</h3>
+        </section>
+
+    <footer>
+        <h1 class="n2">R</h1>
+    </footer>
+
+
+    <script>
+
+
+        /*----Funcao click menu hamburuer----*/
+       const $btnMenu_open = document.querySelector('.btnMenu_open')
+       const $btnMenu_close = document.querySelector('.btnMenu_close')
+       const $menu = document.querySelector('.menu')
+       const $btnBotao = document.querySelector('.scroll')
+       const $btnBotao1 = document.querySelector('.scroll1')
+       const $btnBotao2 = document.querySelector('.scroll2')
+       const $btnBotao3 = document.querySelector('.scroll3')
+       const $btnBotao4 = document.querySelector('.scroll4')
+
+       $btnMenu_open.addEventListener('click' ,function(){
+           $menu.classList.add('menu-open')
+       })
+
+       $btnMenu_close.addEventListener('click', function(){
+           $menu.classList.remove('menu-open')
+       })
+       
+       $btnBotao.addEventListener('click' ,function(){
+            $menu.classList.remove('menu-open')
+       })
+
+       $btnBotao1.addEventListener('click' ,function(){
+            $menu.classList.remove('menu-open')
+       })
+
+       $btnBotao2.addEventListener('click' ,function(){
+            $menu.classList.remove('menu-open')
+       })
+
+       $btnBotao3.addEventListener('click' ,function(){
+            $menu.classList.remove('menu-open')
+       })
+
+       $btnBotao4.addEventListener('click' ,function(){
+            $menu.classList.remove('menu-open')
+       })
+
+
+
+        /*----Funcao click img com modal----*/
+        let imagens= document.querySelectorAll('.small_img');
+        let modal = document.querySelector('.modal');
+        let modalImg = document.querySelector('#modal_img');
+        let btClose = document.querySelector('#btn_close');
+        let srcVal="";
+
+        for(let i =0; i<imagens.length;i++){
+            imagens[i].addEventListener('click',function(){
+                
+                srcVal = imagens[i].getAttribute('src');
+                modalImg.setAttribute('src', srcVal);
+                modal.classList.toggle('modal_active');
+            });
+            
+        }
+
+
+        /*----botao foto perfil backgroud----*/
+        let botao = document.getElementById('botao')
+        botao.addEventListener('click', function(){
+            if(document.getElementById('anonimos2').style.display == 'none'){
+                document.getElementById('anonimos2').style.display = 'block';
+            }else{
+                document.getElementById('anonimos2').style.display = 'none'
+            }
+        })
+        function ani2(){
+            document.getElementById('anonimos2').style.display = 'none';
+        }
+
+        jQuery(document).ready(function($) { 
+            $(".scroll, .scroll1,.scroll2,.scroll3,.scroll4").click(function(event){        
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
+        });
+        });
+    </script>
+</body>
+</html>
