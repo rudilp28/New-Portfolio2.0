@@ -15,6 +15,7 @@
             margin: 0;
             padding: 0;
         }
+       
 
 
         #home {
@@ -89,6 +90,7 @@
             border: 2px solid #f9ca24b0;
             border-radius: 50px;
             transition: all .3s ease-in;
+            margin: 8px;
         }
         img.icone-logo:hover {
             transform: translateY(-5px);
@@ -97,7 +99,7 @@
 
         .icon-global{
             display: flex;
-            margin-left: 9%;
+            margin: 8px;
         }
         div#github {
             margin: 0px 10px;
@@ -943,12 +945,12 @@
             document.getElementById('anonimos2').style.display = 'none';
         }
 
-        // jQuery(document).ready(function($) { 
-        //     $(".scroll, .scroll1,.scroll2,.scroll3,.scroll4").click(function(event){        
-        //         event.preventDefault();
-        //         $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
-        // });
-        // });
+        jQuery(document).ready(function($) { 
+            $(".scroll, .scroll1,.scroll2,.scroll3,.scroll4").click(function(event){        
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
+        });
+        });
     </script>
 </body>
 </html>
